@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/admin.css') }}" />
     <title> Admin Dashboard</title>
 
 </head>
@@ -77,7 +77,7 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2"><?php echo $count; ?></h3>
+                                <h3 class="fs-2">12</h3>
                                 <p class="fs-5">Packages</p>
                             </div>
                             <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -120,102 +120,11 @@
                     </div>
                 </div>
 
-                <div class="row my-5">
-                    <h3 class="fs-4 mb-3">Total Bookings</h3>
-                    <div class="col">
-
-                        <table class="table bg-white rounded shadow-sm  table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col" width="50">#</th>
-                                    <th scope="col">Package</th>
-                                    <th scope="col">Tourist Name</th>
-                                    <th scope="col">Person</th>
-                                    <th scope="col">Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <tr>
-                                    <th scope="row"></th>
-                                    <td>Bandorban</td>
-                                    <td>Kobir Hasan</td>
-
-                                    <td>7500 Tk</td>
-                                </tr>
 
 
-                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>Bandorban</td>
-                                    <td>Kobir Hasan</td>
-                                    <td>7500 Tk</td>
-                                </tr> 
-                                 <tr>
-                                    <th scope="row">3</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Jiniya</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Asha</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Saint Martin</td>
-                                    <td>Shuvo</td>
-                                    <td>10000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Bandorban</td>
-                                    <td>Nazmul</td>
-                                    <td>7000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Tamim Islam</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td>Saint Martin</td>
-                                    <td>Ashraf</td>
-                                    <td>10000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Sazib</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Zico</td>
-                                    <td>8000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">11</th>
-                                    <td>Amiyakhum</td>
-                                    <td>Jico</td>
-                                    <td>9000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Saikat</td>
-                                    <td>8000 Tk</td>
-                                </tr>
-                            </tbody>
-                        </table>
+          {{ $slot }}
 
-                    </div>
-                </div>
+
 
 
             </div>

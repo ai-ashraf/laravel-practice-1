@@ -1,4 +1,4 @@
-<x-admin.layout.sidebar>
+<x-admin.layout.master>
 
 <div class="row my-5">
     <h3 class="fs-4 mb-3">Total Bookings</h3>
@@ -11,16 +11,17 @@
                     <th scope="col">Package</th>
                     <th scope="col">Tourist Name</th>
                     <th scope="col">Person</th>
-                    <th scope="col">Amount</th>
+                    
                 </tr>
             </thead>
             <tbody>
 
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row"></th>
                     <td>Bandorban</td>
                     <td>Kobir Hasan</td>
-                    <td>6000 Tk</td>
+
+                    <td>7500 Tk</td>
                 </tr>
 
 
@@ -95,24 +96,4 @@
 
     </div>
 </div>
-
-
-</div>
-</div>
-</div>
-<!-- /#page-content-wrapper -->
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-var el = document.getElementById("wrapper");
-var toggleButton = document.getElementById("menu-toggle");
-
-toggleButton.onclick = function () {
-el.classList.toggle("toggled");
-};
-</script>
-</body>
-
-</html>
-</x-admin.layout.sidebar>
+</x-admin.layout.master>
