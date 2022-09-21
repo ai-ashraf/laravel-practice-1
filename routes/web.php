@@ -1,9 +1,12 @@
 <?php
+
+use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\ProductDetailsController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +28,4 @@ Route::get('/about',[AboutController::class, 'about']);
 Route::get('/contact',[ContactController::class, 'contact']);
 Route::get('/productdetails',[ProductDetailsController::class, 'productdetails']);
 // Route::get('/about',[AboutController::class, 'about']);
+Route::get('/admin',[DashboardController::class, 'dashboard']);

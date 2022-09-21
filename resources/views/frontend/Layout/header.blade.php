@@ -35,18 +35,21 @@
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
 
-                <ul>
+            <ul>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle mt-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-person"></i> User
                   </a>
+
+
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="login.html">Log in</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="reg.html">Sign up</a></li>
-                    
+
                   </ul>
-                </ul>
+                  </li>
+            </ul>
               </div>
             </div>
           </nav>
