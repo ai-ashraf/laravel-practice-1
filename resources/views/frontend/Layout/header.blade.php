@@ -35,7 +35,7 @@
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
 
-            <ul>
+            <ul >
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle mt-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-person"></i> User
