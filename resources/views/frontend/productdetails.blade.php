@@ -31,7 +31,7 @@
     <div class="container ">
         <div class="row mt-3 mb-5">
             <div class="col-md-5">
-                <img  src="{{ asset('assets/image/bag1.jpg') }}" width="100%" id="largeImg" alt="">
+                <img  src="{{ asset('assets/image/'.$products->product_picture)}}" width="100%" id="largeImg" alt="">
                 <div class="row mt-2 small">
                     <div class="col-md-3 sm">
                         <img class="small-img " src="{{ asset('assets/image/bag1.jpg') }}" alt="">
@@ -49,8 +49,8 @@
 
             </div>
             <div class="col-md-7 mt-4">
-                <h1>Ladies Bag</h1>
-                <h4>999 Tk</h4>
+                <h1>{{ $products->product_name }}</h1>
+                <h4>{{ $products->product_price }} Tk</h4>
                   <select name="" id="">
                     <option value="">Size</option>
                     <option value="">XL</option>
@@ -61,7 +61,7 @@
                   <input type="number" value="1">
                   <a href="" class="btn">Buy Now</a>
                   <h3>Product Details</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto praesentium ipsam in, corporis quos iste, dolores laboriosam, incidunt exercitationem veniam tenetur illo laborum rerum quo ipsum. Doloribus ipsa dolores tenetur enim quos quaerat quas molestias repellendus aliquid culpa? Id, velit!</p>
+                  <p>{{ $products->product_details}}</p>
 
             </div>
         </div>
@@ -75,11 +75,11 @@
       </div>
      <div class="product responsive d-flex">
       <div class="card mb-2">
-        
+
         <img class="p-img card-img-top " src="image/fashion1.jpg" alt="">
-       
+
         <div class="card-body text-center">
-          
+
           <h4>Perfume</h4>
           <a href="product-details.html" class="buy-btn btn">Buy Now</a>
         </div>
@@ -87,17 +87,17 @@
       <div class="card">
         <img class="p-img card-img-top" src="image/fashion2.jpg" alt="">
         <div class="card-body text-center">
-          
+
           <h4>Perfume</h4>
           <a href="" class="buy-btn btn">Buy Now</a>
         </div>
       </div>
       <div class="card">
-        
+
         <img class="p-img card-img-top" src="image/fashion3.jpg" alt="">
-      
+
         <div class="card-body text-center">
-          
+
           <h4>Perfume</h4>
           <a href="" class="buy-btn btn">Buy Now</a>
         </div>
@@ -105,15 +105,15 @@
       <div class="card">
         <img class="p-img card-img-top" src="image/fashion4.jpg" alt="">
         <div class="card-body text-center">
-          
+
           <h4>Perfume</h4>
           <a href="" class="buy-btn btn">Buy Now</a>
         </div>
       </div>
-     
-        
-    
-    </div> 
+
+
+
+    </div>
     </div>
 
   </section> -->
@@ -139,7 +139,7 @@
             largeImg.src = smallImg[3].src;
         }
     </script>
-        
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 @include('frontend.layout.footer')

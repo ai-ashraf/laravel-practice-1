@@ -3,12 +3,21 @@
 }
 .card img{
     height: 250px;
+    width: 355px;
+}
+.category-card.card img{
+    height: 250px;
+    width: 30px;
+
 }
 .card-item .card{
     display: flex;
     margin-right: 15px;
-    
-    
+
+
+}
+.a{
+    text-decoration: none;
 }
 /* footer */
 .footer{
@@ -20,7 +29,7 @@
     margin: 0;
     padding: 0px 20px;
     }
-    
+
     li a{
       text-decoration: none;
       transition: .6s;
@@ -30,7 +39,7 @@
         color: rgb(173, 170, 170);
         padding-left: 7px;
       }
-    
+
      .btn{
         background-color: #baf3d7;
         color: black;
@@ -74,4 +83,4 @@
         padding: 7px 30px;
         color: black;
         background-color: #a9e6c8;
- 
+      }

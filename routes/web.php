@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\DashboardController;
+use App\Http\Controllers\backend\ProductlistController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
@@ -26,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class, 'index']);
 Route::get('/about',[AboutController::class, 'about']);
 Route::get('/contact',[ContactController::class, 'contact']);
-Route::get('/productdetails',[ProductDetailsController::class, 'productdetails']);
+Route::get('/productdetails/{id}',[ProductDetailsController::class, 'productdetails'])->name('products.show');
 // Route::get('/about',[AboutController::class, 'about']);
 Route::get('/admin',[DashboardController::class, 'dashboard']);
+Route::get('/admin/productlist',[ProductlistController::class, 'productlist']);
+Route::get('/admin/productlist/{id}',[ProductlistController::class, 'productshow'])->name('productlist.show');

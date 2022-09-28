@@ -20,7 +20,7 @@
         <div class="bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">E-Commerce</div>
             <div class="list-group list-group-flush my-3">
-                <a href="index.php" class="list-group-item list-group-item-action bg-transparent second-text active">
+                <a href="./" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fal fa-chart-line me-2"></i>Dashboard</a>
                 <a href="create.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-project-diagram me-2"></i>Create category</a>
@@ -89,7 +89,7 @@
                             <div>
 
                                 <h3 class="fs-2">50</h3>
-                                <p class="fs-5">Product</p>
+                                <p class="fs-5"> <a href="../admin/productlist"> Product </a></p>
                             </div>
                             <i
                                 class="fa-thin fa-gears fs-1 primary-text border rounded-full secondary-bg p-3"></i>

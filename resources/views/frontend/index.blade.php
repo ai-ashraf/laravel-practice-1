@@ -65,7 +65,7 @@
       <div class="container mt-5 mb-5">
         <div class="row">
           <div class="col-md-3 ">
-            <div class="card">
+            <div class="card category-card">
               <img src="{{ asset('assets/image/cat1.jpg') }}" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title">Electronics</h5>
@@ -75,7 +75,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card">
+            <div class="card category-card">
               <img src="{{ asset('assets/image/cat2.jpg') }}" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title">Cosmetics</h5>
@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card">
+            <div class="card category-card">
               <img src="{{ asset('assets/image/cat3.jpg') }}" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title">Mens Perfume</h5>
@@ -95,7 +95,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card">
+            <div class="card category-card">
               <img src="{{ asset('assets/image/cat4.jpg') }}" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title">Watch</h5>
@@ -127,7 +127,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">{{ $product->product_name }}</h5>
             <p class="card-text">{{ $product->product_price }}</p>
-            <a href="./productdetails" class="btn ">See Details</a>
+            <a href="{{ route('products.show', $product->id) }}" class="btn ">See Details</a>
           </div>
         </div>
 
