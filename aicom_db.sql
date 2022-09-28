@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 26, 2022 at 11:16 AM
+-- Generation Time: Sep 28, 2022 at 11:11 AM
 -- Server version: 5.7.33
 -- PHP Version: 8.1.7
 
@@ -125,6 +125,16 @@ CREATE TABLE `products` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `product_name`, `product_price`, `product_details`, `product_size`, `product_color`, `product_picture`, `created_at`, `updated_at`) VALUES
+(1, 'Laptop', 75000, 'This process will display the information about the laptop\'s computer make and model, operating system, RAM specifications, and processor model.', '15.5\"', 'Black', 'item2.jpg', NULL, NULL),
+(2, 'Shoe', 1500, 'trytryedtqwueyt qtdqyduiydu y7dtayud  77dyua du uyd udy auy q duqdyi', '42', 'Black & White', 'item3.jpg', NULL, NULL),
+(3, 'Watch', 1300, 'awydteq yqet yt yueq yu uedtyaudy uedyja ', 'Medium', 'Steel', 'item1.jpg', NULL, NULL),
+(4, 'Vase', 2500, 'uyteq uqidyq uiyedq uuey uad uydiaqd uediyd udyeiad u uyd udyai iyuadiiu ', 'XL', 'Pink', 'item4.jpg', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -224,7 +234,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
