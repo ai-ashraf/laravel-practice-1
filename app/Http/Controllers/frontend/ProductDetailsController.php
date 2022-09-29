@@ -12,7 +12,7 @@ class ProductDetailsController extends Controller
     {
         {
             $products = Product::find($id);
-            return view('frontend.productlist' , compact('products'));
+            return view('frontend.productdetails' , compact('products'));
         }
     }
 }
