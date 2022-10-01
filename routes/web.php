@@ -30,5 +30,7 @@ Route::get('/contact',[ContactController::class, 'contact']);
 Route::get('/productdetails/{id}',[ProductDetailsController::class, 'productdetails'])->name('products.show');
 // Route::get('/about',[AboutController::class, 'about']);
 Route::get('/admin',[DashboardController::class, 'dashboard']);
-Route::get('/admin/productlist',[ProductlistController::class, 'productlist']);
+Route::get('/admin/productlist',[ProductlistController::class, 'productlist'])->name('productlist');
+Route::get('/admin/productcreate',[ProductlistController::class, 'create'])->name('productlist.create');
+Route::post('/admin/productcreate',[ProductlistController::class, 'store'])->name('productlist.store');
 Route::get('/admin/productlist/{id}',[ProductlistController::class, 'productshow'])->name('productlist.show');

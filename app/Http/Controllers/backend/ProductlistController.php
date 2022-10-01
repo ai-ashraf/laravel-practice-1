@@ -18,4 +18,24 @@ class ProductlistController extends Controller
         $products = Product::find($id);
         return view('admin.productshow' , compact('products'));
     }
+    public function create()
+    {
+        
+        return view('admin.productcreate');
+    }
+    public function store(Request  $request)
+    {
+        $data = [
+            'product_name' => $request->product_name,
+            'product_price' => $request->product_price,
+            'product_details' => $request->product_details,
+            'product_picture' => $request->product_picture
+        ];
+        
+        Product::create($data); 
+
+        return redirect()
+        ->route('productlist')
+        ->withMessage('Created Succesfully');
+    }
 }
