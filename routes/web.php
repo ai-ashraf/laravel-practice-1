@@ -25,12 +25,25 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class, 'index']);
-Route::get('/about',[AboutController::class, 'about']);
+
+Route::get('/',[AboutController::class, 'about']);
+
 Route::get('/contact',[ContactController::class, 'contact']);
+
 Route::get('/productdetails/{id}',[ProductDetailsController::class, 'productdetails'])->name('products.show');
+
 // Route::get('/about',[AboutController::class, 'about']);
+
 Route::get('/admin',[DashboardController::class, 'dashboard']);
+
 Route::get('/admin/productlist',[ProductlistController::class, 'productlist'])->name('productlist');
+
 Route::get('/admin/productcreate',[ProductlistController::class, 'create'])->name('productlist.create');
+
 Route::post('/admin/productcreate',[ProductlistController::class, 'store'])->name('productlist.store');
+
+Route::get('/admin/productcreate/{id}',[ProductlistController::class, 'edit'])->name('productlist.edit');
+
+Route::patch('/admin/productcreate/{id}',[ProductlistController::class, 'update'])->name('productlist.update');
+
 Route::get('/admin/productlist/{id}',[ProductlistController::class, 'productshow'])->name('productlist.show');

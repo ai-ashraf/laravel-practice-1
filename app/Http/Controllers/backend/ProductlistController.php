@@ -20,8 +20,32 @@ class ProductlistController extends Controller
     }
     public function create()
     {
-        
+
         return view('admin.productcreate');
+    }
+    public function edit($id)
+    {
+        $products = Product::find($id);
+
+        return view('admin.productedit' , compact('products'));
+    }
+
+    public function update(Request  $request , $id)
+    {
+        $products = Product::find($id);
+
+        $data = [
+            'product_name' => $request->product_name,
+            'product_price' => $request->product_price,
+            'product_details' => $request->product_details,
+            // 'product_picture' => $request->product_picture
+        ];
+
+        $Products->update($data);
+
+        return redirect()
+        ->route('productlist')
+        ->withMessage('Created Succesfully');
     }
     public function store(Request  $request)
     {
@@ -31,8 +55,8 @@ class ProductlistController extends Controller
             'product_details' => $request->product_details,
             'product_picture' => $request->product_picture
         ];
-        
-        Product::create($data); 
+
+        Product::create($data);
 
         return redirect()
         ->route('productlist')
