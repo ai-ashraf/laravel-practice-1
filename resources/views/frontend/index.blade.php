@@ -115,14 +115,14 @@
         <h3>Featured Product</h3>
       </div>
       <div class="container-fluid">
+      <div class="row">
 
 
-        <div class="card-item d-flex responsive">
+        <!-- <div class="card-item responsive"> -->
 
         @foreach($products as $product)
-
-
-        <div class="card responsive">
+        <div class="col-md-3 mb-3">
+        <div class="card ">
           <img src="{{ asset('assets/image/'.$product->product_picture)}}" class="card-img-top" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title">{{ $product->product_name }}</h5>
@@ -130,10 +130,11 @@
             <a href="{{ route('products.show', $product->id) }}" class="btn ">See Details</a>
           </div>
         </div>
+        </div>
 
         @endforeach
 
-        {{-- <div class="card">
+        <!-- <div class="card">
           <img src="{{ asset('assets/image/item2.jpg') }}" class="card-img-top" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title">Card title</h5>
@@ -156,17 +157,16 @@
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="./productdetails" class="btn ">Go somewhere</a>
           </div>
-        </div> --}}
+        </div>  -->
 
 
 
       </div>
       </div>
-    </div>
      </section>
 
           <!-- New Product  -->
-          <section>
+          <!-- <section>
             <div class="title text-center mb-3 mt-5">
               <h3>New Product</h3>
             </div>
@@ -209,7 +209,7 @@
 
             </div>
           </div>
-           </section>
+           </section> -->
            @endsection
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

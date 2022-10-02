@@ -3,13 +3,13 @@
 }
 .card img{
     height: 250px;
-    width: 355px;
+    
 }
-.category-card.card img{
+/* .category-card.card img{
     height: 250px;
     width: 306px;
 
-}
+} */
 .card-item .card{
     display: flex;
     margin-right: 15px;
