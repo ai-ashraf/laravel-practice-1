@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class, 'index']);
 
-Route::get('/',[AboutController::class, 'about']);
+Route::get('/about',[AboutController::class, 'about']);
 
 Route::get('/contact',[ContactController::class, 'contact']);
 
@@ -44,6 +44,7 @@ Route::post('/admin/productcreate',[ProductlistController::class, 'store'])->nam
 
 Route::get('/admin/productcreate/{id}',[ProductlistController::class, 'edit'])->name('productlist.edit');
 
-Route::patch('/admin/productcreate/{id}',[ProductlistController::class, 'update'])->name('productlist.update');
+Route::patch('/admin/productupdate/{id}',[ProductlistController::class, 'update'])->name('productlist.update');
 
 Route::get('/admin/productlist/{id}',[ProductlistController::class, 'productshow'])->name('productlist.show');
+Route::delete('/admin/productlist/{id}',[ProductlistController::class, 'destroy'])->name('productlist.delete');

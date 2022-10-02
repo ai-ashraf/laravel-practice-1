@@ -6,7 +6,7 @@
 
 
 
-    <form action="{{ route('productlist.update', $products->product_id)}}" method="post">
+    <form action="{{ route('productlist.update', $products->id)}}" method="post">
         @csrf
         @method('patch')
             <div class="mb-3">

@@ -1,7 +1,13 @@
 <x-admin.layout.master>
 
 <div class="row my-5">
-    <h3 class="fs-4 mb-3">Total Sell</h3>
+    @if(@session('message'))
+    <p class="text-success">
+        {{@session('message')}}
+
+    </p>
+    @endif
+    <h3 class="fs-4 mb-3">Products</h3>
     <div class="col">
 
         <table class="table bg-white rounded shadow-sm  table-hover">
@@ -27,7 +33,14 @@
                     <td>
                         <a class="btn btn-info" href="{{ route('productlist.show', $product->id) }}">Details</a>
                         <a class="btn btn-success" href="{{ route('productlist.edit', $product->id) }}">Edit</a>
-                        <a class="btn btn-danger" href="" onclick="return confirm('Are You Sure Want to Delete ?')">Delete</a>
+
+                        <form action="{{ route('productlist.delete', $product->id) }}" method="post">
+                            @csrf
+                            @method('delete')
+                        <button class="btn btn-danger" onclick="return confirm('Are You Sure Want to Delete ?')">Delete</button>
+
+                        </form>
+                        
                     </td>
                     <td></td>
                 </tr>

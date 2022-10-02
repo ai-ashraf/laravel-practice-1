@@ -32,6 +32,7 @@ class ProductlistController extends Controller
 
     public function update(Request  $request , $id)
     {
+        
         $products = Product::find($id);
 
         $data = [
@@ -41,11 +42,11 @@ class ProductlistController extends Controller
             // 'product_picture' => $request->product_picture
         ];
 
-        $Products->update($data);
+        $products->update($data);
 
         return redirect()
         ->route('productlist')
-        ->withMessage('Created Succesfully');
+        ->withMessage('Updated Succesfully');
     }
     public function store(Request  $request)
     {
@@ -61,5 +62,15 @@ class ProductlistController extends Controller
         return redirect()
         ->route('productlist')
         ->withMessage('Created Succesfully');
+    }
+
+    public function destroy($id)
+    {
+        $products = Product::find($id);
+        $products->delete();
+        return redirect()
+        ->route('productlist')
+        ->withMessage('Deleted Succesfully');
+        
     }
 }
