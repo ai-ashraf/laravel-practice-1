@@ -78,7 +78,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2">12</h3>
-                                <p class="fs-5">Category</p>
+                                <p class="fs-5"> <a href="{{ route('categories.index') }}"> Category </a></p>
                             </div>
                             <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>

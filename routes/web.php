@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\ProductDetailsController;
+use App\Http\Controllers\backend\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -48,3 +49,7 @@ Route::patch('/admin/productupdate/{id}',[ProductlistController::class, 'update'
 
 Route::get('/admin/productlist/{id}',[ProductlistController::class, 'productshow'])->name('productlist.show');
 Route::delete('/admin/productlist/{id}',[ProductlistController::class, 'destroy'])->name('productlist.delete');
+
+// Category
+
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
