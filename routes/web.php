@@ -50,6 +50,10 @@ Route::patch('/admin/productupdate/{id}',[ProductlistController::class, 'update'
 Route::get('/admin/productlist/{id}',[ProductlistController::class, 'productshow'])->name('productlist.show');
 Route::delete('/admin/productlist/{id}',[ProductlistController::class, 'destroy'])->name('productlist.delete');
 
+Route::get('/admin/trashlist',[ProductlistController::class, 'trash'])->name('trashlist');
+
+Route::patch('/admin/productrestore/{id}',[ProductlistController::class, 'restore'])->name('productlist.restore');
+Route::delete('/admin/productdelete/{id}',[ProductlistController::class, 'delete'])->name('productlist.forcedelete');
 // Category
 
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/admin/categories', [CategoryController::class, 'index'])->name('categories.index');

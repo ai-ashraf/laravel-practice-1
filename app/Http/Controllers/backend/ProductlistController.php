@@ -73,4 +73,31 @@ class ProductlistController extends Controller
         ->withMessage('Deleted Succesfully');
         
     }
+
+    public function trash()
+    {
+        $products = Product::onlyTrashed()->get();
+        return view('admin.producttrash' , compact('products'));
+    }
+
+    public function restore($id)
+    {
+        $products = Product::onlyTrashed()->find($id);
+        // dd($products);
+        $products->restore();
+        return redirect()
+        ->route('trashlist')
+        ->withMessage('Restored Succesfully');
+        
+    }
+    public function delete($id)
+    {
+        $products = Product::onlyTrashed()->find($id);
+        // dd($products);
+        $products->forceDelete();
+        return redirect()
+        ->route('trashlist')
+        ->withMessage('Deleted Succesfully');
+        
+    }
 }

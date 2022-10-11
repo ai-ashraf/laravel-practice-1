@@ -30,8 +30,8 @@
                     <i class="fa-solid fa-money-bill-1-wave me-2"></i>Payments</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-question me-2"></i>Sell</a>
-                <a href="all_review.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-star me-2"></i>Reviews</a>
+                <a href="{{ route('trashlist')}}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-star me-2"></i>Trash List</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fal fa-tasks me-2"></i>Manage Booking</a>
 
